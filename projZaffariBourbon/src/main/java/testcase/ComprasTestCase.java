@@ -33,15 +33,17 @@ public class ComprasTestCase {
 	@Test
 	public void Main() throws InterruptedException, IOException {
 		this.compras.gerarMenuCompras();
+		File scrFile1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 		
+		FileUtils.copyFile(scrFile1, new File("c:\\tmp\\compras1.png"));
 		this.compras.gerarComprasPersonalizadas();
 		this.compras.preencherAcougue("nove", "13kg no máximo", "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
 				"13*4");
-		File scrFile1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 		
-		FileUtils.copyFile(scrFile1, new File("c:\\tmp\\compras1.png"));
+		File scrFile2 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 		
+		FileUtils.copyFile(scrFile2, new File("c:\\tmp\\compras1.png"));
 		this.compras.gerarPadaria();
 		this.compras.preencherPadaria("So um", "mas um bem grande", "uma so com recheio", "de creme");
-		File scrFile2 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 		
-		FileUtils.copyFile(scrFile2, new File("c:\\tmp\\compras2.png"));
+		File scrFile3 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 		
+		FileUtils.copyFile(scrFile3, new File("c:\\tmp\\compras2.png"));
 		this.compras.incluirPruduto();
 		Thread.sleep(2000);
 	}		
