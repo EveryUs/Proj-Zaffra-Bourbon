@@ -45,6 +45,8 @@ public class ComprasTestCase {
 		File scrFile3 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 		
 		FileUtils.copyFile(scrFile3, new File("c:\\tmp\\compras2.png"));
 		this.compras.incluirPruduto();
+		File scrFile4 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 		
+		FileUtils.copyFile(scrFile4, new File("c:\\tmp\\compras3.png"));
 		Thread.sleep(2000);
 	}		
 	
